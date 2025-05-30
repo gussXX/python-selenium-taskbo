@@ -11,6 +11,8 @@ Este projeto utiliza Python para automatizar tarefas repetitivas na web, como pr
 
 [Selenium Web Driver](https://www.selenium.dev/documentation/webdriver/browsers/chrome/#service)
 
+[Selenium API Python](https://www.selenium.dev/selenium/docs/api/py/)
+
 [Java Docs](https://javadoc.io/doc/org.seleniumhq.selenium/selenium-api/latest/org/openqa/selenium/WebDriver.html)
 
 ## Pré requisitos
