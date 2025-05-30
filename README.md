@@ -6,6 +6,13 @@ Este projeto utiliza Python para automatizar tarefas repetitivas na web, como pr
 - Aplicar conhecimentos em scraping web.
 - WebDrivers em diversos sistemas operacionais.
 
+## Documentações uteis
+[Selenium Client Driver](https://www.selenium.dev/selenium/docs/api/py/index.html)
+
+[Selenium Web Driver](https://www.selenium.dev/documentation/webdriver/browsers/chrome/#service)
+
+[Java Docs](https://javadoc.io/doc/org.seleniumhq.selenium/selenium-api/latest/org/openqa/selenium/WebDriver.html)
+
 ## Pré requisitos
 
 para executar esse projeto com maestria é necessário:
