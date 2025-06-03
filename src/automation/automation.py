@@ -17,7 +17,7 @@ class Automation:
         return driver.current_url
     
     async def get_element_by_css(self, driver, selector):
-        print(f"Obtendo o elemento pelo seletor CSS: {selector}")
+        print(f"Obtendo o elemento pelo seletor CSS: {selector}\n")
         try:
             element = driver.find_element("css selector", selector)
             return element.text

@@ -1,0 +1,33 @@
+from selenium import webdriver # type: ignore
+from selenium.webdriver.chrome.options import Options # type: ignore
+from selenium.webdriver.chrome.service import Service # type: ignore
+from webdriver_manager.chrome import ChromeDriverManager # type: ignore
+from selenium.webdriver.common.by import By # type: ignore
+
+class Driver:
+    def __init__(self):
+
+        options = Options()
+        options.add_argument('--headless')
+        options.add_argument('--no-sandbox')
+        options.add_argument('--disable-dev-shm-usage')
+        options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/114.0.5735.90 Safari/537.36")
+            
+        self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
+
+    async def init_driver(self, url: str):
+        if self.driver is None:
+            raise Exception("Driver não inicializado. Por favor, inicialize o driver primeiro.")
+        
+        self.driver.get(url)
+        print("==============================")
+        print("Driver inicializado com sucesso!")
+        print("==============================\n")
+
+        return self.driver
+
+    async def get_driver(self):
+        if self.driver is None:
+            raise Exception("Driver não inicializado. Por favor, inicialize o driver primeiro.")
+        return self.driver
+
