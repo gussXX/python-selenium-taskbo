@@ -1,0 +1,5 @@
+    # print(driver.page_source)
+    # print(driver.find_element("css selector", ".h3.mb-3.selenium-ide").text)
+
+    # # Seleciona o elemento com a classe h3, mb-3 e selenium-ide, restringindo a busca ao elemento <h4> que contém essas classes.
+    # print(driver.find_element("xpath", "//h4[contains(@class, 'h3') and contains(@class, 'mb-3') and contains(@class, 'selenium-ide')]").text)
