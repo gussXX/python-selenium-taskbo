@@ -4,6 +4,9 @@ from selenium.webdriver.chrome.service import Service # type: ignore
 from webdriver_manager.chrome import ChromeDriverManager # type: ignore
 from selenium.webdriver.common.by import By # type: ignore
 
+import sys
+sys.dont_write_bytecode = True
+
 class Driver:
     def __init__(self):
 
@@ -26,8 +29,12 @@ class Driver:
 
         return self.driver
 
-    async def get_driver(self):
-        if self.driver is None:
-            raise Exception("Driver não inicializado. Por favor, inicialize o driver primeiro.")
-        return self.driver
 
+    async def close_driver(self):
+        if self.driver is not None:
+            self.driver.quit()
+            print("==============================")
+            print("Driver fechado com sucesso!")
+            print("==============================\n")
+        else:
+            print("Nenhum driver para fechar.")
