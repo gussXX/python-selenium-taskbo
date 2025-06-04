@@ -20,11 +20,12 @@ class Prices:
             automation = Automation(url = link, driver = drivers)
 
             try:
-                # response = await automation.get_title(drivers)
-                # print(f'Título da página: {response}\n')
-
-                # Retorna o elemento pelo XPath
-                responde = await automation.get_element_by_xpath(drivers, xpath = "//p[contains(@class, 'sc-dcJsrY') and contains(@class, 'eLxcFM') and contains(@class, 'sc-hgRRfv') and contains(@class, 'dfAhbD')]")
+                responde = await automation.get_element_by_xpath(
+                    drivers, xpath = ""
+                    "//p[contains(@class, 'sc-dcJsrY') "
+                    "and contains(@class, 'eLxcFM') "
+                    "and contains(@class, 'sc-hgRRfv') "
+                    "and contains(@class, 'dfAhbD')]")
                 print(f'{responde}\n')
 
                 responses.append(responde)
