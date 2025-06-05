@@ -16,7 +16,7 @@ class Prices:
 
         for link in links:
 
-            drivers = await driver.init_driver(url = link)
+            drivers = await driver.set_page(url = link)
             automation = Automation(url = link, driver = drivers)
 
             try:
@@ -26,7 +26,7 @@ class Prices:
                     "and contains(@class, 'eLxcFM') "
                     "and contains(@class, 'sc-hgRRfv') "
                     "and contains(@class, 'dfAhbD')]")
-                print(f'{responde}\n')
+                # print(f'{responde}\n')
 
                 responses.append(responde)
 

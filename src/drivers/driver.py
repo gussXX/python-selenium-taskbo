@@ -18,14 +18,11 @@ class Driver:
             
         self.driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
-    async def init_driver(self, url: str):
+    async def set_page(self, url: str):
         if self.driver is None:
             raise Exception("Driver não inicializado. Por favor, inicialize o driver primeiro.")
         
         self.driver.get(url)
-        print("==============================")
-        print("Driver inicializado com sucesso!")
-        print("==============================\n")
 
         return self.driver
 
@@ -33,8 +30,8 @@ class Driver:
     async def close_driver(self):
         if self.driver is not None:
             self.driver.quit()
-            print("==============================")
-            print("Driver fechado com sucesso!")
-            print("==============================\n")
+            # print("==============================")
+            # print("Driver fechado com sucesso!")
+            # print("==============================\n")
         else:
             print("Nenhum driver para fechar.")
