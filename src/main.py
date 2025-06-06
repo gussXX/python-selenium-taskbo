@@ -69,6 +69,9 @@ async def run_prices():
     print(prices_response)
 
 async def count_itens():
+
+    # ESSA FUNÇÃO RETORNA OS PREÇOS E NOMES DOS ITENS DA PÁGINA DO SITE KABUM
+
     print("Contando itens...")
 
     url = "https://www.kabum.com.br/promocao/PCGAMER"
