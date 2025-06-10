@@ -68,6 +68,7 @@ async def run_prices():
     prices_response = await prices.get_prices(links = prices.links)
     print(prices_response)
 
+# Modularizar esta função para contar os itens da página do site Kabum
 async def count_itens():
 
     # ESSA FUNÇÃO RETORNA OS PREÇOS E NOMES DOS ITENS DA PÁGINA DO SITE KABUM
